@@ -54,7 +54,7 @@ function rendermath() {
         });
 }
 function setBackgroud(){
-    var number=document.getElementById('home-background').style.backgroundImage.toString().match(/\d+/g)
+    var number=document.getElementById('home-background').style.backgroundImage.toString().match(/\d+/)
     console.log(number)
     document.getElementById('home-background').style.backgroundImage="url('images/home"+Math.round(Math.random() * number)+".jpg')"
 }
