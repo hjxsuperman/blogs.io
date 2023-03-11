@@ -53,10 +53,15 @@ function rendermath() {
             ],
         });
 }
+function setBackgroud(){
+    var number=document.getElementById('home-background').style.backgroundImage.toString().match(/\d/g)
+    document.getElementById('home-background').style.backgroundImage="url('images/home"+Math.round(Math.random() * (number))+".jpg')"
+}
 function renderall() {
     highlight();
     showimg();
     rendermath();
+    setBackgroud();
 }
 function sha(str) {
     return CryptoJS.SHA256(str).toString();
